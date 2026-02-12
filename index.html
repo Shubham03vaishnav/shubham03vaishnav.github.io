@@ -1,103 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Shubham Vaishnav | Portfolio</title>
+  <title>Shubham Vaishnav | Python & Django Developer</title>
+
+  <!-- Fonts: Outfit (Modern Sans Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Icons (Bootstrap Icons / FontAwesome via CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Shubham Vaishnav | Premium Portfolio. Python & Django Developer specializing in AI chatbots.">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
-  <div class="container-fluid px-4">
-    <a class="navbar-brand fw-bold" href="index.html">Shubham Vaishnav</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <button id="darkModeToggle" class="btn btn-outline-light btn-sm ms-3 toggle-icon">
-  🌙
-</button>
-  </div>
-</nav>
-
-
-<div class="container text-center my-5">
-  <h1 class="fw-bold">Hi, I'm Shubham Vaishnav 👋</h1>
-  <h4 class="text-muted mt-2">
-    Python & Django Developer | AI Chatbots with Ollama & Mistral
-  </h4>
-
-  <p class="mt-4 fs-5">
-    I build real-world web applications and AI-powered systems using Django,
-    local LLMs, and clean backend architecture.
-  </p>
-
-  <div class="mt-4">
-    <a href="projects.html" class="btn btn-primary btn-lg m-2">View Projects</a>
-    <a href="contact.html" class="btn btn-outline-dark btn-lg m-2">Contact Me</a>
-  </div>
-</div>
-<footer class="footer bg-dark text-light mt-5">
-  <div class="container py-4 text-center">
-    <p class="mb-1 fw-semibold">Shubham Vaishnav</p>
-    <p class="mb-2 small">
-      Python & Django Developer | AI Chatbots with Ollama & Mistral
-    </p>
-
-    <div class="d-flex justify-content-center gap-3">
-      <a href="https://github.com/Shubham03vaishnav" target="_blank" class="footer-link">
-        GitHub
-      </a>
-      <a href="#" class="footer-link">LinkedIn</a>
-      <a href="contact.html" class="footer-link">Contact</a>
+  <!-- DESKTOP SIDEBARS (Visible on LG screens and up) -->
+  <div class="d-none d-lg-block">
+    <!-- LEFT SIDEBAR: CONNECT -->
+    <div class="side-bar side-bar-left">
+      <div class="side-bar-icons">
+        <a href="mailto:shubhamvaishnav8987@gmail.com" class="side-icon-box" data-tooltip="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a href="https://github.com/Shubham03vaishnav" target="_blank" class="side-icon-box" data-tooltip="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/shubham-vaishnav-b79133271" target="_blank" class="side-icon-box"
+          data-tooltip="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+      <div class="side-bar-text">Connect</div>
     </div>
 
-    <p class="mt-3 small text-muted">
-      © 2026 Shubham Vaishnav. All rights reserved.
-    </p>
+    <!-- RIGHT SIDEBAR: NAVIGATE -->
+    <div class="side-bar side-bar-right">
+      <div class="side-bar-text">Navigate</div>
+      <div class="side-bar-icons" id="side-nav-links">
+        <a href="#home" class="side-icon-box active" data-tooltip="Home">
+          <i class="bi bi-house"></i>
+        </a>
+        <a href="#about" class="side-icon-box" data-tooltip="About">
+          <i class="bi bi-person"></i>
+        </a>
+        <a href="#skills" class="side-icon-box" data-tooltip="Skills">
+          <i class="bi bi-code-slash"></i>
+        </a>
+        <a href="#experience" class="side-icon-box" data-tooltip="Experience">
+          <i class="bi bi-briefcase"></i>
+        </a>
+        <a href="#education" class="side-icon-box" data-tooltip="Education">
+          <i class="bi bi-mortarboard"></i>
+        </a>
+        <a href="#projects" class="side-icon-box" data-tooltip="Projects">
+          <i class="bi bi-layers"></i>
+        </a>
+        <a href="#contact" class="side-icon-box" data-tooltip="Contact">
+          <i class="bi bi-send"></i>
+        </a>
+      </div>
+    </div>
   </div>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const toggleBtn = document.getElementById("darkModeToggle");
-  const body = document.body;
+  <!-- MOBILE/TABLET NAVBAR (Visible < LG) -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top d-lg-none">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand" href="#home">SV.</a>
 
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const savedMode = localStorage.getItem("darkMode");
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
 
-  // Apply mode on load
-  if (savedMode === "enabled" || (!savedMode && systemPrefersDark)) {
-    body.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️";
-  } else {
-    toggleBtn.textContent = "🌙";
-  }
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-premium btn-sm" href="#contact">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="container-fluid px-lg-5">
+      <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-lg-7 hero-content-left reveal">
+          <!-- Terminal Line -->
+          <div class="terminal-loader">
+            <span class="terminal-user">shubham@portfolio</span>
+            <span class="text-white">:</span>
+            <span class="terminal-path">~/intro</span>
+            <span class="text-white">$</span>
+            <span>whoami</span>
+            <span class="terminal-cursor"></span>
+          </div>
 
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("darkMode", "enabled");
-      toggleBtn.textContent = "☀️";
-    } else {
-      localStorage.setItem("darkMode", "disabled");
-      toggleBtn.textContent = "🌙";
+          <h4 class="text-uppercase text-warning fw-bold mb-3 letter-spacing-2">I AM A</h4>
+
+          <h1 class="hero-title-large">
+            Python <span class="text-gradient">Developer.</span>
+          </h1>
+
+          <p class="hero-description">
+            Django backend developer with hands-on experience in building REST-based web applications using Python,
+            Django, and MySQL. Strong understanding of authentication, CRUD operations, backend logic, and API
+            development. Built real-world projects including an AI-powered chatbot and an e-commerce slot booking
+            system. Actively seeking a Django backend intern/trainee role with immediate joining.
+            <!-- I build <span class="hero-highlight">scalable, secure backend systems</span> and AI-driven applications.
+            My work spans architecture design, API development, database optimization, and integrating local LLMs
+            for private, intelligent solutions. -->
+          </p>
+
+          <div class="d-flex gap-3 reveal">
+            <a href="#projects" class="btn btn-premium btn-lg">Explore Projects <i
+                class="bi bi-arrow-right ms-2"></i></a>
+          </div>
+
+
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-lg-5 reveal" style="transition-delay: 0.3s">
+          <div class="hero-image-wrapper">
+            <div class="hero-circle-glow"></div>
+            <!-- Profile Image -->
+            <img src="assets/img/profile.jpg" alt="Shubham Vaishnav" class="hero-profile-img">
+
+            <!-- Corner Accents for Tech Feel -->
+            <div class="corner-accent corner-tl"></div>
+            <div class="corner-accent corner-br"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Big Watermark Name -->
+    <div class="big-name-watermark">
+      Shubham Vaishnav
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Bio Text -->
+        <div class="col-lg-6 mb-5 mb-lg-0 reveal">
+          <h2 class="section-title text-start mb-4">About Me</h2>
+          <p class="lead text-white mb-4">
+            Aspiring software developer with expertise in Python, Django, and web technologies.
+          </p>
+          <p class="mb-4">
+            Passionate about AI-driven applications and fitness-related projects. Seeking opportunities to apply my
+            skills in software development and AI based solutions.
+            I specialize in creating robust APIs, secure authentication systems, and interactive
+            AI chatbots using local LLMs like Ollama and Mistral. I treat every line of code as a craft,
+            prioritizing cleanliness, efficiency, and maintainability.
+          </p>
+          <a href="assets/Shubham_Vaishnav_Python.pdf" download="Shubham_Vaishnav_Resume.pdf"
+            class="btn btn-outline-premium">Download Resume</a>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-md-6 reveal">
+              <div class="glass-card h-100">
+                <i class="bi bi-server fs-1 text-primary mb-3 d-block"></i>
+                <h5 class="fw-bold text-white">Backend Dev</h5>
+                <p class="small mb-0">Scalable architectures using Django & Python.</p>
+              </div>
+            </div>
+            <div class="col-md-6 reveal" style="transition-delay: 0.1s">
+              <div class="glass-card h-100">
+                <i class="bi bi-cpu fs-1 text-info mb-3 d-block"></i>
+                <h5 class="fw-bold text-white">AI Integration</h5>
+                <p class="small mb-0">Chatbots & Logic with Ollama/Mistral/LLMs.</p>
+              </div>
+            </div>
+            <div class="col-md-6 reveal" style="transition-delay: 0.2s">
+              <div class="glass-card h-100">
+                <i class="bi bi-hdd-network fs-1 text-warning mb-3 d-block"></i>
+                <h5 class="fw-bold text-white">RESTful APIs</h5>
+                <p class="small mb-0">Secure and optimized API endpoints.</p>
+              </div>
+            </div>
+            <div class="col-md-6 reveal" style="transition-delay: 0.3s">
+              <div class="glass-card h-100">
+                <i class="bi bi-database fs-1 text-success mb-3 d-block"></i>
+                <h5 class="fw-bold text-white">Database</h5>
+                <p class="small mb-0">Efficient schema design & ORM optimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <h2 class="section-title reveal">Technical Expertise</h2>
+      <p class="text-center text-muted mb-5 reveal">My arsenal of tools and technologies</p>
+
+      <div class="row g-4 d-flex align-items-stretch">
+        <!-- Backend -->
+        <div class="col-lg-6 reveal">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <i class="bi bi-server"></i>
+              </div>
+              <h4 class="skill-category-title">Backend Development</h4>
+            </div>
+            <div class="skill-tags-container">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">C Language</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-lg-6 reveal" style="transition-delay: 0.1s">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <i class="bi bi-window-sidebar"></i>
+              </div>
+              <h4 class="skill-category-title">Frontend Development</h4>
+            </div>
+            <div class="skill-tags-container">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">jQuery</span>
+              <span class="skill-tag">Bootstrap 5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI & LLM -->
+        <div class="col-lg-6 reveal" style="transition-delay: 0.2s">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <i class="bi bi-robot"></i>
+              </div>
+              <h4 class="skill-category-title">AI & LLMs</h4>
+            </div>
+            <div class="skill-tags-container">
+              <span class="skill-tag">Ollama</span>
+              <span class="skill-tag">Mistral</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Chatbot Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="col-lg-6 reveal" style="transition-delay: 0.3s">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h4 class="skill-category-title">Tools & Others</h4>
+            </div>
+            <div class="skill-tags-container">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Quick Learning</span>
+              <span class="skill-tag">Team Work</span>
+              <span class="skill-tag">Communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section-padding">
+    <div class="container">
+      <h2 class="section-title reveal">Professional Experience</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="glass-card reveal">
+            <div class="timeline">
+              <!-- Internship -->
+              <div class="timeline-item mb-0">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">Aug 2023 - Feb 2024</span>
+                <h4 class="text-white mb-1">Python/Django Developer Intern</h4>
+                <p class="text-primary mb-2">Creart Solutions | Ahmedabad</p>
+                <p>
+                  Developed and maintained full-stack dynamic web applications using Python & Django.
+                  Implemented user authentication, session management, and business logic on the backend.
+                  Designed frontend features ensuring seamless integration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="section-padding">
+    <div class="container">
+      <h2 class="section-title reveal">Education</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="glass-card reveal">
+            <div class="timeline">
+              <!-- Education 1 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2025 - Present</span>
+                <h4 class="text-white mb-1">Master of Computer Applications (MCA)</h4>
+                <p class="text-primary mb-2">L J University (NAAC B++)</p>
+                <p>Pursuing MCA with a current CGPA of 7.00. Deepening knowledge in advanced computing and software
+                  architecture.</p>
+              </div>
+
+              <!-- Education 2 -->
+              <div class="timeline-item mb-0">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2021 - 2024</span>
+                <h4 class="text-white mb-1">Bachelor of Computer Applications (BCA)</h4>
+                <p class="text-primary mb-2">Gujarat University</p>
+                <p>
+                  Completed BCA with a CGPA of 6.92. Built a strong foundation in programming, algorithms, and database
+                  management.
+                </p>
+              </div>
+
+              <!-- Education 3 (HSC) -->
+              <div class="timeline-item mb-0">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2019 - 2021</span>
+                <h4 class="text-white mb-1">Higher Secondary (HSC)</h4>
+                <p class="text-primary mb-2">Good Shepherd Higher Secondary</p>
+                <p>Completed with 67.71%. Focus on Science and Mathematics.</p>
+              </div>
+
+              <!-- Education 4 (SSC) -->
+              <div class="timeline-item mb-0">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">2019</span>
+                <h4 class="text-white mb-1">Matriculation (SSC)</h4>
+                <p class="text-primary mb-2">Good Shepherd High School</p>
+                <p>Completed with 65.16%.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <h2 class="section-title reveal">Featured Projects</h2>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Project 1 -->
+        <!-- Project 1 -->
+        <div class="col-lg-6 reveal">
+          <div class="glass-card project-card h-100">
+            <div class="project-img-placeholder">
+              <i class="bi bi-chat-dots fs-1"></i>
+            </div>
+            <div class="project-content">
+              <h4 class="fw-bold text-white mb-2">AI Chatbot Web Application</h4>
+              <div class="mb-3">
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">jQuery</span>
+                <span class="tech-tag">Ollama</span>
+              </div>
+              <p class="mb-4">
+                Full-stack AI chatbot with Django-based request handling.
+                Integrated local LLM inference (Mistral via Ollama) and <strong>OpenRouter API</strong>, eliminating
+                external API costs.
+                Features responsive UI, dark/light mode toggle, and animated typing effects.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="https://github.com/Shubham03vaishnav/ai-chatbot-django" target="_blank"
+                  class="btn btn-sm btn-outline-premium">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-6 reveal" style="transition-delay: 0.1s">
+          <div class="glass-card project-card h-100">
+            <div class="project-img-placeholder">
+              <i class="bi bi-cart3 fs-1"></i>
+            </div>
+            <div class="project-content">
+              <h4 class="fw-bold text-white mb-2">Express Physical Shopping (EPS)</h4>
+              <div class="mb-3">
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <p class="mb-4">
+                E-commerce platform for booking shopping slots with online payment.
+                Implemented a smart system that suggests optimal booking slots based on past data
+                to minimize rush-hour congestion.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-outline-premium">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center reveal">
+          <h2 class="section-title mb-2">Let's Work Together</h2>
+          <p class="mb-5">Have a project in mind or want to discuss the latest in AI?</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center reveal">
+        <div class="col-lg-6">
+          <div class="glass-card">
+            <form action="https://formsubmit.co/shubhamvaishnav8987@gmail.com" method="POST">
+              <!-- FormSubmit Settings -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Portfolio Contact">
+              <input type="hidden" name="_next" value="https://shubham03vaishnav.github.io/index.html">
+
+              <div class="mb-3">
+                <label class="form-label text-white small">Your Name</label>
+                <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label text-white small">Your Email</label>
+                <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label text-white small">Message</label>
+                <textarea name="message" class="form-control" rows="4" placeholder="Tell me about your project..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-premium w-100 py-2">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container text-center">
+      <h3 class="fw-bold text-white mb-3">SV.</h3>
+      <div class="d-flex justify-content-center gap-4 mb-4">
+        <a href="https://github.com/Shubham03vaishnav" target="_blank" class="text-white fs-4"><i
+            class="bi bi-github"></i></a>
+        <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="text-white fs-4"><i class="bi bi-twitter-x"></i></a>
+        <a href="mailto:shubhamvaishnav8987@gmail.com" class="text-white fs-4"><i class="bi bi-envelope"></i></a>
+      </div>
+      <p class="small mb-0 opacity-50">
+        &copy; 2026 Shubham Vaishnav. Built with &#9829; and Code.
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll Reveal Animation
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
     }
-  });
-</script>
+    window.addEventListener("scroll", reveal);
+
+    // Trigger once on load
+    reveal();
+
+    // Navbar Background on Scroll (Mobile Only)
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.style.background = 'rgba(10, 10, 12, 0.95)';
+          navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+        } else {
+          navbar.style.background = 'rgba(10, 10, 12, 0.7)';
+          navbar.style.boxShadow = 'none';
+        }
+      });
+    }
+
+    // Active State for Side Nav
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".side-icon-box");
+
+    window.onscroll = () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") && link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+
+      reveal(); // Call reveal on scroll
+    };
+  </script>
 
 </body>
+
 </html>
