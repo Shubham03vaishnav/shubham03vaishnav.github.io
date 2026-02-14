@@ -898,11 +898,6 @@ footer {
     padding-top: 100px;
   }
 
-  .hero-section .row {
-    flex-direction: column-reverse;
-    /* Image (Col 2) comes first, Text (Col 1) comes second */
-  }
-
   /* Adjust Hero Image for Mobile */
   .hero-profile-img {
     width: 250px;
