@@ -603,6 +603,11 @@ footer {
     opacity: 1;
     visibility: visible;
   }
+
+  /* Desktop Hero Row Reverse (Because DOM is Image First for Mobile) */
+  .hero-section .row {
+    flex-direction: row-reverse;
+  }
 }
 
 /* =========================================

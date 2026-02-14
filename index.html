@@ -113,8 +113,22 @@
   <section id="home" class="hero-section">
     <div class="container-fluid px-lg-5">
       <div class="row align-items-center">
-        <!-- Left Content -->
-        <div class="col-lg-7 hero-content-left reveal order-2 order-lg-1">
+        <!-- Right Image (Visually Right on Desktop, Top on Mobile) -->
+        <!-- Moved FIRST in DOM for Mobile Layout -->
+        <div class="col-lg-5 reveal" style="transition-delay: 0.3s">
+          <div class="hero-image-wrapper">
+            <div class="hero-circle-glow"></div>
+            <!-- Profile Image -->
+            <img src="assets/img/profile.jpg" alt="Shubham Vaishnav" class="hero-profile-img">
+
+            <!-- Corner Accents for Tech Feel -->
+            <div class="corner-accent corner-tl"></div>
+            <div class="corner-accent corner-br"></div>
+          </div>
+        </div>
+
+        <!-- Left Content (Visually Left on Desktop, Bottom on Mobile) -->
+        <div class="col-lg-7 hero-content-left reveal">
           <!-- Terminal Line -->
           <div class="terminal-loader">
             <span class="terminal-user">shubham@portfolio</span>
@@ -147,19 +161,6 @@
           </div>
 
 
-        </div>
-
-        <!-- Right Image -->
-        <div class="col-lg-5 reveal order-1 order-lg-2" style="transition-delay: 0.3s">
-          <div class="hero-image-wrapper">
-            <div class="hero-circle-glow"></div>
-            <!-- Profile Image -->
-            <img src="assets/img/profile.jpg" alt="Shubham Vaishnav" class="hero-profile-img">
-
-            <!-- Corner Accents for Tech Feel -->
-            <div class="corner-accent corner-tl"></div>
-            <div class="corner-accent corner-br"></div>
-          </div>
         </div>
       </div>
     </div>
