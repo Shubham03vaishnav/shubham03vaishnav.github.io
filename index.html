@@ -113,24 +113,22 @@
   <section id="home" class="hero-section">
     <div class="container-fluid px-lg-5">
       <div class="row align-items-center">
-        <!-- Right Image (Visually Right on Desktop, Top on Mobile) -->
-        <!-- Moved FIRST in DOM for Mobile Layout -->
-        <div class="col-lg-5 reveal" style="transition-delay: 0.3s">
-          <div class="hero-image-wrapper">
-            <div class="hero-circle-glow"></div>
-            <!-- Profile Image -->
-            <img src="assets/img/profile.jpg" alt="Shubham Vaishnav" class="hero-profile-img">
-
-            <!-- Corner Accents for Tech Feel -->
-            <div class="corner-accent corner-tl"></div>
-            <div class="corner-accent corner-br"></div>
+        <!-- Mobile-Only Terminal Line (Appears First on Mobile) -->
+        <div class="col-12 d-lg-none mb-4 text-center">
+          <div class="terminal-loader justify-content-center">
+            <span class="terminal-user">shubham@portfolio</span>
+            <span class="text-white">:</span>
+            <span class="terminal-path">~/intro</span>
+            <span class="text-white">$</span>
+            <span>whoami</span>
+            <span class="terminal-cursor"></span>
           </div>
         </div>
 
-        <!-- Left Content (Visually Left on Desktop, Bottom on Mobile) -->
-        <div class="col-lg-7 hero-content-left reveal">
-          <!-- Terminal Line -->
-          <div class="terminal-loader">
+        <!-- Left Content (Text) - Order 2 on Mobile, 1 on Desktop -->
+        <div class="col-lg-7 hero-content-left reveal order-2 order-lg-1">
+          <!-- Desktop Terminal Line (Hidden on Mobile) -->
+          <div class="terminal-loader d-none d-lg-flex">
             <span class="terminal-user">shubham@portfolio</span>
             <span class="text-white">:</span>
             <span class="terminal-path">~/intro</span>
@@ -161,6 +159,19 @@
           </div>
 
 
+        </div>
+
+        <!-- Right Image - Order 1 on Mobile, 2 on Desktop -->
+        <div class="col-lg-5 reveal order-1 order-lg-2" style="transition-delay: 0.3s">
+          <div class="hero-image-wrapper">
+            <div class="hero-circle-glow"></div>
+            <!-- Profile Image -->
+            <img src="assets/img/profile.jpg" alt="Shubham Vaishnav" class="hero-profile-img">
+
+            <!-- Corner Accents for Tech Feel -->
+            <div class="corner-accent corner-tl"></div>
+            <div class="corner-accent corner-br"></div>
+          </div>
         </div>
       </div>
     </div>
