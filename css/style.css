@@ -894,12 +894,13 @@ footer {
 
 @media (max-width: 992px) {
   .hero-section {
-    flex-direction: column-reverse;
-    /* Keep text on top as requested? No, usually Image Top is improved for mobile. Let's try Image Top (column-reverse IF HTML is text-first). HTML is Text First. So column-reverse makes Image First. */
-    flex-direction: column;
-    /* This keeps HTML order: Text then Image. Better for "Intro" then "Face". */
     text-align: center;
     padding-top: 100px;
+  }
+
+  .hero-section .row {
+    flex-direction: column-reverse;
+    /* Image (Col 2) comes first, Text (Col 1) comes second */
   }
 
   /* Adjust Hero Image for Mobile */
