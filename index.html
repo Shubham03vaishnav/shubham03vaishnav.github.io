@@ -24,6 +24,14 @@
   <!-- SEO Meta Tags -->
   <meta name="description"
     content="Shubham Vaishnav | Premium Portfolio. Python & Django Developer specializing in AI chatbots.">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shubham03vaishnav.github.io/">
+  <meta property="og:title" content="Shubham Vaishnav | Python & Django Developer">
+  <meta property="og:description"
+    content="Premium Portfolio of Shubham Vaishnav. Python, Django, and AI Chatbot Developer.">
+  <meta property="og:image" content="https://shubham03vaishnav.github.io/assets/img/profile.jpg">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
@@ -159,6 +167,12 @@
     <!-- Big Watermark Name -->
     <div class="big-name-watermark">
       Shubham Vaishnav
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-down">
+      <span>Scroll Down</span>
+      <i class="bi bi-chevron-double-down"></i>
     </div>
   </section>
 
@@ -511,68 +525,20 @@
         <a href="mailto:shubhamvaishnav8987@gmail.com" class="text-white fs-4"><i class="bi bi-envelope"></i></a>
       </div>
       <p class="small mb-0 opacity-50">
-        &copy; 2026 Shubham Vaishnav. Built with &#9829; and Code.
+        &copy; <span class="copyright-year">2026</span> Shubham Vaishnav. Built with &#9829; and Code.
       </p>
     </div>
   </footer>
 
   <!-- SCRIPTS -->
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="btn-premium">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Scroll Reveal Animation
-    function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
-      }
-    }
-    window.addEventListener("scroll", reveal);
-
-    // Trigger once on load
-    reveal();
-
-    // Navbar Background on Scroll (Mobile Only)
-    const navbar = document.getElementById('navbar');
-    if (navbar) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          navbar.style.background = 'rgba(10, 10, 12, 0.95)';
-          navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
-        } else {
-          navbar.style.background = 'rgba(10, 10, 12, 0.7)';
-          navbar.style.boxShadow = 'none';
-        }
-      });
-    }
-
-    // Active State for Side Nav
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".side-icon-box");
-
-    window.onscroll = () => {
-      let current = "";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") && link.getAttribute("href").includes(current)) {
-          link.classList.add("active");
-        }
-      });
-
-      reveal(); // Call reveal on scroll
-    };
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 
